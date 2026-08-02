@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pecking Order User Manual</title>
+  <meta name="description" content="User manual for Pecking Order, a local-first chicken flock, breeding, genealogy and pecking order app.">
+  <style>
+    :root {
+      --bg: #fdfbf4;
+      --paper: #ffffff;
+      --ink: #2f2a22;
+      --muted: #6d6257;
+      --line: #e5dccd;
+      --accent: #8a5a23;
+      --accent-soft: #f3e7d6;
+      --warning: #7a3f00;
+      --warning-bg: #fff1db;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    header {
+      background: linear-gradient(135deg, #fff7ea, #f2ddbf);
+      border-bottom: 1px solid var(--line);
+      padding: 36px 18px 28px;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    main {
+      padding: 22px 18px 48px;
+    }
+
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      margin: 18px 0;
+      box-shadow: 0 1px 2px rgba(47, 42, 34, 0.04);
+    }
+
+    section h2 {
+      margin-top: 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      margin-top: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    ul, ol {
+      padding-left: 1.45rem;
+    }
+
+    li {
+      margin: 0.25rem 0;
+    }
+
+    .toc {
+      background: var(--accent-soft);
+    }
+
+    .toc ol {
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .note, .warning {
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+
+    .note {
+      background: #f6f3ee;
+      border: 1px solid var(--line);
+    }
+
+    .warning {
+      background: var(--warning-bg);
+      border: 1px solid #efc47d;
+      color: var(--warning);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f7efe3;
+    }
+
+    code {
+      background: #f7efe3;
+      padding: 0.1rem 0.3rem;
+      border-radius: 5px;
+    }
+
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 22px 18px 36px;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .toc ol {
+        columns: 1;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Pecking Order User Manual</h1>
+      <p class="subtitle">A practical guide to using Pecking Order for flock records, breeding, genealogy, backups and pecking-order tracking.</p>
+      <p class="subtitle"><strong>Last updated:</strong> 2 August 2026</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="toc" id="contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#important-backups">Important: backups</a></li>
+        <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#my-flock">My Flock</a></li>
+        <li><a href="#photos">Chicken photos</a></li>
+        <li><a href="#groups">Groups and flock organisation</a></li>
+        <li><a href="#breeding">Breeding records and chick batches</a></li>
+        <li><a href="#family-tree">Family tree, ancestors and pedigree</a></li>
+        <li><a href="#pecking-order">Pecking Order graphs</a></li>
+        <li><a href="#backup-restore">Backup and restore</a></li>
+        <li><a href="#plans-purchases">Plans and purchases</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#support">Support</a></li>
+      </ol>
+    </section>
+
+    <section id="overview">
+      <h2>1. Overview</h2>
+      <p><strong>Pecking Order</strong> is a local-first record-keeping app for poultry keepers and breeders. It helps you keep important flock information in one place, including chicken profiles, groups, breeding records, chick batches, genealogy, family trees, custom fields and pecking-order relationships.</p>
+      <p>The app is designed for both small backyard flocks and more detailed breeder record keeping. Core flock-management tools are available free, with optional one-time purchases for expanded flock capacity, extra custom fields and breeder features.</p>
+      <div class="note">
+        <strong>Local-first app:</strong> your flock records are stored on your device. Pecking Order does not require an account to use the main record-keeping features.
+      </div>
+    </section>
+
+    <section id="important-backups">
+      <h2>2. Important: backups</h2>
+      <p>Your records are valuable. Please create regular backups and save them somewhere outside the app, such as Files, cloud storage, email or another device.</p>
+      <div class="warning">
+        <strong>Do not rely only on the phone.</strong> A backup left only on the same phone is not protection against phone loss, damage or replacement.
+      </div>
+      <p>A Pecking Order backup is intended to help restore your app data if you move devices or need to recover your records. Backups can include your database, chick batches, snapshots, genealogy and app-managed chicken photos.</p>
+    </section>
+
+    <section id="getting-started">
+      <h2>3. Getting started</h2>
+      <ol>
+        <li>Open Pecking Order.</li>
+        <li>Add your first chicken in <strong>My Flock</strong>.</li>
+        <li>Add basic details such as name, sex, breed, hatch date, egg colour and notes.</li>
+        <li>Add a photo if you want one shown in profiles and graph views.</li>
+        <li>Create or use groups to organise birds by flock, pen, breeding group, quarantine or another system that suits you.</li>
+        <li>Create a backup once you have entered important records.</li>
+      </ol>
+      <p>You do not need to fill in every field at the start. Pecking Order is intended to grow with your records over time.</p>
+    </section>
+
+    <section id="my-flock">
+      <h2>4. My Flock</h2>
+      <p><strong>My Flock</strong> is where you manage individual chicken records.</p>
+      <h3>Chicken profile details</h3>
+      <p>A chicken profile can include:</p>
+      <ul>
+        <li>Name</li>
+        <li>Sex</li>
+        <li>Record type</li>
+        <li>Status</li>
+        <li>Breed</li>
+        <li>Egg colour</li>
+        <li>Hatch date and age</li>
+        <li>Notes</li>
+        <li>Photo</li>
+        <li>Custom field values, when custom fields are set up</li>
+      </ul>
+
+      <h3>Full chicken records</h3>
+      <p>A full chicken record is for a bird that is part of your current or historical flock records. Full records count toward your flock allowance.</p>
+
+      <h3>Ancestor-only records</h3>
+      <p>An ancestor-only record is for an external or historical bird that you want to include in genealogy without treating it as part of your living flock. For example, you might use this for a known parent, grandparent or purchased breeding-line bird.</p>
+
+      <h3>Status</h3>
+      <p>Chicken status helps keep your flock list accurate while preserving useful history. Status options may include active, sold, rehomed, deceased or missing.</p>
+    </section>
+
+    <section id="photos">
+      <h2>5. Chicken photos</h2>
+      <p>Photos help identify birds and make graph views easier to understand.</p>
+      <ul>
+        <li>Use <strong>Add photo</strong> when creating or editing a chicken.</li>
+        <li>Use <strong>Replace photo</strong> to update an existing photo.</li>
+        <li>Use <strong>Remove</strong> to remove the photo from that chicken profile.</li>
+      </ul>
+      <p>New and replaced chicken photos are copied into app storage when the record is saved, so they can be included in backups.</p>
+      <div class="note">
+        Existing older photos that were linked from your gallery may be migrated into app storage the next time that chicken record is saved.
+      </div>
+    </section>
+
+    <section id="groups">
+      <h2>6. Groups and flock organisation</h2>
+      <p>Groups help organise birds in a way that matches how you actually manage your flock.</p>
+      <p>Examples of groups include:</p>
+      <ul>
+        <li>Main flock</li>
+        <li>Breeding pen</li>
+        <li>Rooster group</li>
+        <li>Grow-out group</li>
+        <li>Quarantine group</li>
+        <li>Sold or historical group</li>
+      </ul>
+      <h3>Lead hen</h3>
+      <p>A lead hen can be selected as a separate group role. This is useful for describing the group, but it does not automatically create dominance relationships in the pecking-order graph.</p>
+    </section>
+
+    <section id="breeding">
+      <h2>7. Breeding records and chick batches</h2>
+      <p>Pecking Order includes tools for recording breeding activity and chick outcomes.</p>
+
+      <h3>Breeding records</h3>
+      <p>Use breeding records to keep notes about pairings, breeding plans, fertility, hatch results or other breeding details relevant to your flock.</p>
+
+      <h3>Chick batches</h3>
+      <p>Chick batches let you record a hatch or group of chicks before every chick becomes an individual chicken record.</p>
+      <p>A chick batch may be used to track:</p>
+      <ul>
+        <li>Batch name</li>
+        <li>Known mother and father, where applicable</li>
+        <li>Number of chicks</li>
+        <li>Notes</li>
+        <li>Outcomes such as mortality, rehoming, sale or another reduction</li>
+      </ul>
+
+      <h3>Converting chicks into individual records</h3>
+      <p>When a chick becomes important enough to track individually, you can create a full chicken record from the batch. Known batch parents can be linked automatically into the family tree.</p>
+    </section>
+
+    <section id="family-tree">
+      <h2>8. Family tree, ancestors and pedigree</h2>
+      <p>The family tree tools help record known parentage and breeding lines.</p>
+      <h3>Assigning parents</h3>
+      <p>Open a chicken profile and use <strong>Family Tree / Parents</strong> to assign known parents.</p>
+
+      <h3>Ancestor-only records</h3>
+      <p>Ancestor-only records are useful when a parent or grandparent is not part of your current flock but should still appear in genealogy.</p>
+
+      <h3>Pedigree depth</h3>
+      <p>The standard visual pedigree supports a useful hobby-level family tree. Breeder Unlock extends the interactive pedigree to more generations.</p>
+
+      <h3>Share pedigree PDF</h3>
+      <p>Breeder Unlock includes a shareable pedigree PDF feature. From a chicken profile, use <strong>Share pedigree PDF</strong> to create a shareable profile with photo, details, parents and grandparents.</p>
+    </section>
+
+    <section id="pecking-order">
+      <h2>9. Pecking Order graphs</h2>
+      <p>The Pecking Order area records relationships between birds and displays them visually.</p>
+
+      <h3>Dominance relationships</h3>
+      <p>A dominance relationship records that one bird is dominant over another. These relationships are used to build the pecking-order graph.</p>
+
+      <h3>Best friends</h3>
+      <p>Best-friend links are separate from dominance relationships. They can help show social bonds without changing the hierarchy.</p>
+
+      <h3>Graph views</h3>
+      <table>
+        <thead>
+          <tr><th>View</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Bird</strong></td><td>Shows direct dominance and best-friend links for the selected bird. This is useful for investigating a complex flock.</td></tr>
+          <tr><td><strong>Hierarchy</strong></td><td>Shows a hierarchy-style layout based on recorded dominance relationships.</td></tr>
+          <tr><td><strong>Network</strong></td><td>Shows a wider network-style relationship view.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Observed loops</h3>
+      <p>Sometimes real flocks do not form a perfect straight hierarchy. The app may show an observed loop where relationships circle back between birds. This is not necessarily a mistake; it can reflect the way a flock behaves.</p>
+
+      <h3>Snapshots</h3>
+      <p>Snapshots preserve a saved view of a group’s pecking order at a point in time. This is useful because flock relationships can change over time.</p>
+
+      <h3>Share and save graph images</h3>
+      <p>Graph views can be shared or saved as images. This is useful for records, social sharing or comparing flock changes over time.</p>
+    </section>
+
+    <section id="backup-restore">
+      <h2>10. Backup and restore</h2>
+      <h3>Create and share backup</h3>
+      <ol>
+        <li>Open <strong>Settings</strong>.</li>
+        <li>Choose <strong>Create &amp; share backup</strong>.</li>
+        <li>Use the share screen to save the backup somewhere safe, such as Files, Drive, email or another device.</li>
+      </ol>
+
+      <h3>Restore backup</h3>
+      <ol>
+        <li>Open <strong>Settings</strong>.</li>
+        <li>Choose <strong>Restore backup</strong>.</li>
+        <li>Select a valid Pecking Order backup file.</li>
+        <li>Confirm that you want to replace the current app data.</li>
+        <li>Close and reopen Pecking Order after the restore notice appears.</li>
+      </ol>
+      <div class="warning">
+        <strong>Restoring replaces current app data.</strong> Restore only when you are sure the selected backup is the one you want to use.
+      </div>
+    </section>
+
+    <section id="plans-purchases">
+      <h2>11. Plans and purchases</h2>
+      <p>Pecking Order includes a free Hobby plan and optional one-time purchases.</p>
+
+      <h3>Hobby plan</h3>
+      <ul>
+        <li>Up to 6 full chicken records</li>
+        <li>2 custom chicken fields</li>
+        <li>Up to 25 ancestor-only records</li>
+        <li>Hobby-level pedigree view</li>
+      </ul>
+
+      <h3>Flock Packs</h3>
+      <p>Flock Packs are permanent one-time purchases that increase the full chicken record allowance.</p>
+      <table>
+        <thead>
+          <tr><th>Pack</th><th>Full chicken allowance</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Flock Pack 1</td><td>10 chickens</td></tr>
+          <tr><td>Flock Pack 2</td><td>14 chickens</td></tr>
+          <tr><td>Flock Pack 3</td><td>18 chickens</td></tr>
+          <tr><td>Flock Pack 4</td><td>22 chickens</td></tr>
+          <tr><td>Flock Pack 5</td><td>25 chickens</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Custom Field Packs</h3>
+      <ul>
+        <li><strong>Custom Fields Pack 1:</strong> adds two more custom chicken fields, for four in total.</li>
+        <li><strong>Custom Fields Pack 2:</strong> adds another two custom chicken fields, for six in total.</li>
+      </ul>
+
+      <h3>Breeder Unlock</h3>
+      <p>Breeder Unlock is a one-time purchase for users who want expanded breeder features.</p>
+      <p>Breeder Unlock includes:</p>
+      <ul>
+        <li>Unlimited chickens</li>
+        <li>Unlimited custom fields</li>
+        <li>Unlimited ancestor-only records</li>
+        <li>Four-generation pedigree</li>
+        <li>Shareable pedigree PDF</li>
+        <li>Breeder CSV data export</li>
+      </ul>
+
+      <h3>Restore purchases</h3>
+      <p>Use <strong>Restore purchases</strong> in Plans &amp; Purchases if you reinstall the app or move to another device using the same store account.</p>
+    </section>
+
+    <section id="troubleshooting">
+      <h2>12. Troubleshooting</h2>
+      <h3>I cannot see a purchase I made</h3>
+      <p>Open <strong>Settings → Plans &amp; Purchases</strong> and use <strong>Restore purchases</strong>. Make sure you are using the same Google Play or App Store account that made the purchase.</p>
+
+      <h3>My backup is not useful if it is only on my phone</h3>
+      <p>That is correct. After creating a backup, save it somewhere outside the app and outside the phone where possible.</p>
+
+      <h3>Some older photos are missing from a backup</h3>
+      <p>New and replaced photos are copied into app storage when saved. Very old gallery-linked photos may need the original file to still exist. Opening and saving the chicken record again may help migrate reachable older photos into app storage.</p>
+
+      <h3>The pecking-order hierarchy does not look like a simple straight line</h3>
+      <p>Real flock behaviour can be messy. If birds have circular or conflicting relationships, the app may show loops or network-style relationships rather than a simple top-to-bottom order.</p>
+
+      <h3>I restored a backup and the app says to close and reopen</h3>
+      <p>Close and reopen Pecking Order so the restored database is loaded cleanly.</p>
+    </section>
+
+    <section id="support">
+      <h2>13. Support</h2>
+      <p>For support, email:</p>
+      <p><strong><a href="mailto:peckingsupport@gmail.com">peckingsupport@gmail.com</a></strong></p>
+      <p>When asking for help, include:</p>
+      <ul>
+        <li>Your device type and operating system version, if known</li>
+        <li>What you were trying to do</li>
+        <li>What happened instead</li>
+        <li>Whether you have a recent backup</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Pecking Order © 2026. This manual is provided as a practical guide and may be updated as the app changes.</p>
+  </footer>
+</body>
+</html>
