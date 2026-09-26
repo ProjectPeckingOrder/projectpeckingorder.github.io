@@ -5,7 +5,7 @@ The public GitHub Pages site for Pecking Order lives at
 
 - `index.html` is the app homepage.
 - `styles.css` contains its responsive styling.
-- `user-manual.html` is the existing user guide.
+- `user-manual.html` is the current app manual; keep this URL stable for readers and search results.
 - `privacy-policy.html` is the existing privacy policy URL used by the app and
   store listings. Keep this path stable when changing its design or content.
 - `robots.txt` points crawlers to `sitemap.xml`, which lists the homepage,
