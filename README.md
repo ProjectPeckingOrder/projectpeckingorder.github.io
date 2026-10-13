@@ -1,7 +1,23 @@
 # Pecking Order website
 
-The public GitHub Pages site for Pecking Order lives at
-[projectpeckingorder.github.io](https://projectpeckingorder.github.io/).
+The public site for Pecking Order lives at
+[projectpeckingorder.com](https://projectpeckingorder.com/) on Cloudflare Workers
+Static Assets. The previous GitHub Pages address remains available; its store
+links have not been changed in this migration. Site owner: Kevin Trigg.
+
+Run `node build.mjs` to prepare the explicit public asset list in `dist/`, then
+deploy using the pinned Wrangler 4.149.0 from the sibling app repository's
+`backend/cloudflare/cloud-backup` package and this site's `wrangler.jsonc`.
+The build rewrites canonical and sitemap URLs for the Cloudflare deployment.
+Do not upload the repository root: it contains source and deployment files.
+
+The homepage and manual continue to describe the shipped app. Optional accounts,
+cloud backup, a web companion and other app subdomains are not advertised as
+available. Publish cloud privacy information before enabling those features.
+The public support address is `support@projectpeckingorder.com`. Cloudflare Email
+Routing forwards it to the owner's verified `peckingsupport@gmail.com` mailbox.
+The rule is active; an end-to-end delivery test has not been sent. This is incoming
+mail forwarding, not an outbound mailbox or the sign-in-code sending service.
 
 - `index.html` is the app homepage.
 - `styles.css` contains its responsive styling.
