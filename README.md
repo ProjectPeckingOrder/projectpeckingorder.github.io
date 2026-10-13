@@ -13,11 +13,16 @@ Do not upload the repository root: it contains source and deployment files.
 
 The homepage and manual continue to describe the shipped app. Optional accounts,
 cloud backup, a web companion and other app subdomains are not advertised as
-available. Publish cloud privacy information before enabling those features.
+available. The privacy policy now describes the optional private cloud-backup
+pilot and its Cloudflare, Supabase and Resend providers. Keep it aligned with
+the service before enabling features in a public app build.
 The public support address is `support@projectpeckingorder.com`. Cloudflare Email
 Routing forwards it to the owner's verified `peckingsupport@gmail.com` mailbox.
 The rule is active; an end-to-end delivery test has not been sent. This is incoming
 mail forwarding, not an outbound mailbox or the sign-in-code sending service.
+Resend Free now sends Supabase sign-in codes from the support address. The owner
+confirmed a test code reached the Gmail inbox on 13 October 2026. This verifies
+outbound login email, not the separate inbound forwarding route.
 
 - `index.html` is the app homepage.
 - `styles.css` contains its responsive styling.

@@ -52,15 +52,17 @@
   <p>
     Your information is used only to provide the app's flock-management,
     breeding, egg tracking, family-tree, pecking-order, backup, and export features.
-    Pecking Order does not operate a user-account system, cloud database,
-    advertising service, or analytics service for your flock records.
+    The publicly released app stores flock records locally and does not require
+    an account. Optional account and cloud-backup features are being prepared
+    for a private pilot, described below. We do not sell your flock records or
+    use them for advertising.
   </p>
 
   <h2>Photos, backups, exports, and sharing</h2>
   <p>
     The app accesses photos or files when you choose to add or change a photo,
     create or restore a backup, export information, or share an export.
-    Backups and exports are created only when you initiate them. Optional egg
+    Local backups and exports are created when you initiate them. Optional egg
     and backup reminders use device notifications when enabled or permitted.
   </p>
 
@@ -68,7 +70,61 @@
     If you choose to share or save a backup or export using another app,
     cloud-storage provider, email service, or device location, that service
     handles the information under its own privacy policy. Pecking Order does
-    not automatically send your flock records to Project Pecking Order.
+    not send your flock records to Project Pecking Order unless you choose to
+    use the optional cloud-backup pilot.
+  </p>
+
+  <h2 id="cloud-backup">Optional accounts and cloud backup: private pilot</h2>
+  <p>
+    These features are not enabled in the publicly released app. In a pilot
+    build, signing in is optional and the app continues to work locally without
+    an account. Creating an account does not start a subscription or upload
+    your existing flock records. You must explicitly link the records on your
+    device and choose a backup before a copy is uploaded.
+  </p>
+  <p>
+    Supabase provides email-code sign-in. It processes your email address,
+    account identifier, verification and session information, and security
+    information such as sign-in times and network addresses. Resend delivers
+    login emails and processes the recipient address, email content and delivery
+    information; your email provider also handles the message. We do not enable
+    email-open or link-click tracking for sign-in emails. The app stores its
+    sign-in session in the device's secure storage, outside
+    flock backup files, so you can stay signed in between visits.
+  </p>
+  <p>
+    When you back up, a copy of the app's records and managed photos is sent to
+    private Cloudflare storage. Backup metadata includes your account identifier,
+    archive identifier, date, size and a checksum used to check file integrity.
+    Our service checks your signed-in account before allowing access to a
+    backup. Backups are protected in transit and in provider storage; they are
+    not end-to-end encrypted with a key held only by you. The operator and
+    service providers can process this information to run and support the service.
+    Cloudflare, Supabase and Resend may process service and security information outside
+    New Zealand under their respective
+    <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>,
+    <a href="https://supabase.com/privacy">Supabase privacy policy</a>
+    and <a href="https://resend.com/legal/privacy-policy">Resend privacy policy</a>.
+  </p>
+  <p>
+    The pilot keeps the five latest completed cloud backups. An older copy is
+    removed after a new one completes successfully. If you turn on automatic
+    backup, the app attempts a backup when you open or return to it, when at
+    least 24 hours have passed since the last successful backup. This is a
+    recovery service; it does not synchronise edits between devices. A pilot
+    archive is limited to 50 MiB. Keep a separate local backup of important records.
+  </p>
+  <p>
+    You can download or delete individual cloud backups in Account &amp; cloud
+    backup. Deleting your cloud account there removes its cloud archives,
+    backup metadata and sign-in account; it does not erase records on your
+    device, files you previously downloaded, or store purchases. Signing out
+    stops automatic backups on that device but does not delete cloud copies.
+    Expiry of pilot upload access does not by itself delete existing backups
+    or prevent their download or deletion. Service providers may retain
+    limited security logs or recovery copies according to their retention
+    policies. Contact support if you cannot access your account or need help
+    with access, correction or deletion.
   </p>
 
   <h2>Purchases and verification</h2>
