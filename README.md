@@ -11,11 +11,15 @@ deploy using the pinned Wrangler 4.149.0 from the sibling app repository's
 The build rewrites canonical and sitemap URLs for the Cloudflare deployment.
 Do not upload the repository root: it contains source and deployment files.
 
-The homepage and manual continue to describe the shipped app. Optional accounts,
-cloud backup, a web companion and other app subdomains are not advertised as
-available. The privacy policy now describes the optional private cloud-backup
-pilot and its Cloudflare, Supabase and Resend providers. Keep it aligned with
-the service before enabling features in a public app build.
+The homepage and manual distinguish shipped features from the latest Google
+Play closed-testing update. Pen headcounts, the new Home/Full Breeder tiers,
+deworming reminders and automatic sync/history must not be described as
+available to every public Android or iPhone user until those releases ship.
+The original full Breeder Unlock retains Full Breeder access. Cloud backup and
+web access remain a separate subscription. The privacy policy covers automatic
+record/photo transfer after account linking, 50 retained record versions,
+five separate archive backups, photo retention, and the Cloudflare, Supabase
+and Resend providers. Keep these statements aligned with the deployed service.
 The public support address is `support@projectpeckingorder.com`. Cloudflare Email
 Routing forwards it to the owner's verified `peckingsupport@gmail.com` mailbox.
 The rule is active; an end-to-end delivery test has not been sent. This is incoming

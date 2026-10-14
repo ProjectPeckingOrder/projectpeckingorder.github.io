@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pecking Order User Manual</title>
-  <meta name="description" content="Pecking Order app manual: first setup, adding chickens and ducks, recording eggs, mapping dominance, breeding records, backups and purchases.">
+  <meta name="description" content="Pecking Order app manual: individual birds, pen headcounts, eggs, chick batches, deworming reminders, automatic cloud sync, recovery history and breeder plans.">
   <link rel="canonical" href="https://projectpeckingorder.com/user-manual.html">
   <style>
     :root {
@@ -172,7 +172,7 @@
     <div class="wrap">
       <h1>Pecking Order User Manual</h1>
       <p class="subtitle">A practical guide to flock records, eggs, breeding, backups and pecking-order maps.</p>
-      <p class="subtitle"><strong>Last updated:</strong> 26 September 2026</p>
+      <p class="subtitle"><strong>Last updated:</strong> 14 October 2026</p>
     </div>
   </header>
 
@@ -191,6 +191,8 @@
         <li><a href="#family-tree">Family tree, ancestors and pedigree</a></li>
         <li><a href="#pecking-order">Pecking Order flock map</a></li>
         <li><a href="#backup-restore">Backup and restore</a></li>
+        <li><a href="#cloud-sync">Automatic cloud sync and history</a></li>
+        <li><a href="#deworming">Deworming reminders</a></li>
         <li><a href="#plans-purchases">Plans and purchases</a></li>
         <li><a href="#important-backups">Keeping your records safe</a></li>
         <li><a href="#troubleshooting">Troubleshooting</a></li>
@@ -201,11 +203,12 @@
     <section id="overview">
       <h2>1. Overview</h2>
       <p><strong>Pecking Order</strong> is a local-first record-keeping app for poultry keepers and breeders. It brings chicken and duck profiles, egg collection, groups, breeding records, chick batches, genealogy, custom fields and pecking-order relationships together.</p>
-      <p>Core flock-management tools are free. Optional one-time packs, a permanent Breeder Unlock, a monthly subscription and limited event previews provide additional capacity or features.</p>
+      <p>Core flock-management tools are free. Optional one-time packs and breeder unlocks provide additional capacity or features. Cloud backup and web access use a separate subscription. You do not need to subscribe to use locally purchased breeder features.</p>
       <div class="note">
         <strong>Local-first app:</strong> your flock records are stored on your device. Pecking Order does not require an account to use the main record-keeping features.
       </div>
-      <p>This manual follows the current Android and iPhone app. Some controls may look slightly different on the two platforms, and optional features depend on your plan.</p>
+      <div class="note"><strong>Latest test update:</strong> pen headcounts, the Home and Full Breeder tiers, deworming reminders, automatic sync and record history are being introduced through Google Play closed testing. The public Android and iPhone versions may not yet include them. The sections below identify these additions; purchase availability and prices are shown in your store.</div>
+      <p>Some controls may look slightly different between Android, iPhone and the web app, and optional features depend on your plan.</p>
     </section>
 
     <section id="getting-started">
@@ -219,6 +222,7 @@
         <li>After you have entered records you care about, open <strong>Settings → Create &amp; share backup</strong> and save the file outside the app.</li>
       </ol>
       <div class="note"><strong>Start small:</strong> a flock name and one bird are enough to begin. Add groups, breeding history and relationship observations as you learn them.</div>
+      <p><strong>Tracking a whole pen?</strong> In the latest test version, Full Breeder also lets you start at <strong>Flocks → Create Flock → Pen / flock headcount</strong>. Enter a number of birds without making an individual profile for each one. You can use both approaches together.</p>
     </section>
 
     <section id="app-navigation">
@@ -230,7 +234,7 @@
           <tr><td><strong>Flock</strong></td><td>Add and find birds, open profiles, record eggs, and reach chick batches and ancestor-only records.</td></tr>
           <tr><td><strong>Order</strong></td><td>Record dominance and best-friend relationships, nominate a lead bird, open the flock map, and save snapshots.</td></tr>
           <tr><td><strong>Tree</strong></td><td>Explore parents and offspring, edit parent links, and open pedigree views.</td></tr>
-          <tr><td><strong>Flocks</strong></td><td>Create, rename or archive flocks and create a quarantine group.</td></tr>
+          <tr><td><strong>Flocks</strong></td><td>Create, rename or archive flocks and create a quarantine group. In the latest test version, Full Breeder also manages pen headcounts, movements and pen records here.</td></tr>
           <tr><td><strong>Settings</strong></td><td>Back up or restore data, set reminders, manage custom fields and open Plans &amp; Purchases.</td></tr>
         </tbody>
       </table>
@@ -275,7 +279,7 @@
         <li>Use <strong>Replace photo</strong> to update an existing photo.</li>
         <li>Use <strong>Remove</strong> to remove the photo from that bird profile.</li>
       </ul>
-      <p>One main bird photo is available on the free plan. Bird photos 2 and 3 and the egg photo require active Breeder access (permanent Unlock, monthly subscription or an event preview). If timed access ends, existing photos stay saved, but you cannot add or replace the extra photos until access returns.</p>
+      <p>One main bird photo is available on the free plan. Bird photos 2 and 3 and the egg photo require Breeder access. In the latest test version, Home Breeder and Full Breeder both include them; eligible earlier Breeder purchases and event previews still work. A cloud subscription alone does not unlock these extra photos. If timed Breeder access ends, existing photos stay saved, but you cannot add or replace the extra photos until access returns.</p>
       <p>New and replaced photos are copied into app storage when the record is saved, so they can be included in backups.</p>
       <div class="note">
         Older photos linked from your gallery may be migrated into app storage the next time that bird record is saved.
@@ -293,6 +297,7 @@
       </ol>
       <h3>Read the chart</h3>
       <p>Tap <strong>View egg statistics</strong>. Choose <strong>Day</strong> (last 30 days), <strong>Week</strong> (last 12 weeks) or <strong>Year</strong> (monthly totals), then choose Combined, Chicken or Duck. The latest bars appear on the right; scroll sideways for older dates. <strong>View graph as a list</strong> gives a text alternative. Days without a collection count as zero in the displayed averages.</p>
+      <p>Updated builds also offer bar or line charts and a coloured rolling-average line in <strong>Chart options</strong>. The rolling average follows the trend over time. You can record defective eggs separately and choose whether to include them in totals. If you do not keep ducks, hide duck options in Settings and turn them on again later.</p>
       <h3>Other egg observations</h3>
       <p>From an eligible bird's profile, <strong>Record individual egg observation</strong> records that bird's output for sorting and history. These observations <strong>do not add to the overall daily collection total</strong>. The Egg collection screen also offers observations by breed with active Breeder access. Saved breed observations remain visible if timed access ends, but adding new ones requires Breeder access.</p>
       <p>In <strong>Settings</strong>, you can optionally turn on the <strong>Daily egg reminder</strong> and choose its time. Your phone must allow notifications for it to appear.</p>
@@ -310,6 +315,17 @@
         <li>Quarantine group</li>
         <li>Sold or historical group</li>
       </ul>
+      <h3>Track a pen by headcount — latest test version</h3>
+      <p><strong>Full Breeder</strong> adds a second way to organise a flock. A pen can represent a numbered enclosure, a breed or another group you manage together. Your existing individual bird records remain available.</p>
+      <ol>
+        <li>Open <strong>Flocks → Create Flock</strong>.</li>
+        <li>Choose <strong>Pen / flock headcount</strong>. Choose <strong>Individual birds</strong> instead if you want a group of named or numbered bird profiles.</li>
+        <li>Enter a <strong>Pen or flock name</strong> and species, with an optional breed.</li>
+        <li>Enter <strong>Birds tracked together</strong> and the <strong>Count date</strong>. You can also add a photo and notes, then save.</li>
+        <li>Open the pen to use <strong>Update headcount / move birds</strong>, <strong>Record eggs for this pen</strong>, <strong>Record breeding / hatch</strong> or its <strong>Deworming reminder</strong>.</li>
+      </ol>
+      <p>Record additions, sales, losses, transfers and count corrections as changes to the pen. The movement history explains how the headcount changed. Moving birds between pens updates both sides of the transfer.</p>
+      <p>Use <strong>Track a bird individually</strong> when you want a profile for a particular bird. If it is already part of the pen count, leave <strong>Already included in this pen’s headcount</strong> selected so it is removed from the birds counted together. The named bird and remaining pen count are shown separately, avoiding a duplicate count.</p>
       <h3>Lead hen</h3>
       <p>On <strong>Order</strong>, use <strong>Lead Bird</strong> to nominate a lead hen or bird for the selected group. The star marks this role on the map. It does not automatically create a dominance relationship or prove that the bird outranks every other bird.</p>
     </section>
@@ -334,6 +350,8 @@
 
       <h3>Converting chicks into individual records</h3>
       <p>When a chick becomes important enough to track individually, you can create a full chicken record from the batch. Known batch parents can be linked automatically into the family tree.</p>
+      <h3>Move chicks into a pen — latest test version</h3>
+      <p>With Full Breeder, use <strong>Move chicks into pen</strong> from a pen or the corresponding action on a chick batch. Choose the number to move. The app records the batch allocation and adds those birds to the pen headcount, without requiring a name for each chick. Only chicks still available in the batch can be moved.</p>
     </section>
 
     <section id="family-tree">
@@ -385,7 +403,7 @@
 
     <section id="backup-restore">
       <h2>11. Backup and restore</h2>
-      <p>A backup is a <code>.peckingorder</code> file containing your database and app-managed media. It can include bird records, chick batches, genealogy, egg records, order snapshots and game scores. Store purchases are tied to the store account and are restored separately.</p>
+      <p>A backup is a <code>.peckingorder</code> file containing your database and app-managed media. It can include bird records, chick batches, genealogy, egg records, order snapshots and game scores. Latest test builds also include pen records, pen photos, headcount movements and deworming records. Store purchases are tied to the store account and are restored separately; importing a backup does not grant another account’s purchases.</p>
       <h3>Create and share backup</h3>
       <ol>
         <li>Open <strong>Settings</strong>.</li>
@@ -399,17 +417,56 @@
         <li>Choose <strong>Restore backup</strong>.</li>
         <li>Select a valid <code>.peckingorder</code> backup file.</li>
         <li>Read the replacement warning and confirm only if this is the backup you want.</li>
-        <li>Close and reopen Pecking Order after the restore notice appears.</li>
+        <li>In the latest test version, tap <strong>Load restored data</strong> after the restore completes. If your older version asks you to close and reopen, follow that notice.</li>
       </ol>
       <div class="warning">
         <strong>Restoring replaces current app data.</strong> Restore only when you are sure the selected backup is the one you want to use.
       </div>
-      <p><strong>Settings</strong> also has a backup and new-features reminder. It is on by default where notifications are allowed and repeats about every 30 days. Turning it off and on starts a new interval. <strong>It is only a reminder: the app does not create backups automatically.</strong></p>
+      <p><strong>Settings</strong> also has a backup and new-features reminder. It is on by default where notifications are allowed and repeats about every 30 days. Turning it off and on starts a new interval. This reminder itself does not create a backup. Optional automatic cloud backup is a separate setting.</p>
+    </section>
+
+    <section id="cloud-sync">
+      <h2>12. Automatic cloud sync and history</h2>
+      <p><strong>Latest test version.</strong> Cloud backup and web access require a separate subscription purchased through the phone app. A Home or Full Breeder unlock provides local breeder features; it does not include the cloud subscription. Signing in does not start a subscription.</p>
+      <h3>Connect existing phone records</h3>
+      <ol>
+        <li>Update to a supported phone build, then open <strong>Settings → Account &amp; cloud backup</strong>.</li>
+        <li>Sign in with your email and the emailed code. Keep the code private and enter it in the app.</li>
+        <li>Activate or restore the cloud subscription using the store account that purchased it.</li>
+        <li>Choose <strong>Link the records on this device</strong> and confirm the account. This is your consent to sync the existing records and their managed photos.</li>
+        <li>Open <strong>History &amp; sync</strong> and let the first sync finish. On your computer, open <a href="https://app.projectpeckingorder.com">the web app</a> and sign in using the same email.</li>
+      </ol>
+      <h3>What saves automatically?</h3>
+      <p>Finish each entry using its usual Save or Record control. There is no separate “save to cloud” step: recorded changes sync within a few seconds while connected. Changes waiting to upload remain on that device if you close the app or browser and sync when you open it again. Unfinished forms are not saved records.</p>
+      <p>Other devices receive changes while the app is open; changes arriving while you are editing wait until you finish that screen. Phone records remain usable offline. Keep the app open until it reports that syncing has finished before relying on another device having your latest changes.</p>
+      <h3>Go back after a mistake</h3>
+      <p>Open <strong>History &amp; sync → Cloud history</strong> to see the latest 50 saved record versions. Use <strong>Restore</strong> beside the version you need and read the confirmation before continuing. A restore makes a new current version and can replace changes made since the chosen version. It keeps the earlier history rather than rewriting it. Photos used by retained versions remain available with those versions.</p>
+      <p>Separate archive backups keep up to five completed copies of your database and managed photos. In <strong>Account &amp; cloud backup</strong>, <strong>Automatic daily backup</strong> creates one when you open or return to the phone app after at least 24 hours. Record history and archive backups serve different recovery needs; you can also keep an exported backup outside the service.</p>
+      <h3>If two devices change the same information</h3>
+      <p>Changes to different records or fields can merge automatically. If changes conflict, syncing pauses and <strong>History &amp; sync</strong> asks you to choose. <strong>Use cloud version</strong> and <strong>Use this device’s version</strong> choose a complete set of records, so read the warning and check which device has the information you need before continuing. Recovery copies are kept.</p>
+      <p>Signing out stops automatic sync on that device. It does not delete your phone records or your cloud copies. See the <a href="privacy-policy.html#cloud-backup">privacy policy</a> for storage, history, photo retention and account deletion details.</p>
+    </section>
+
+    <section id="deworming">
+      <h2>13. Deworming reminders</h2>
+      <p><strong>Latest test version.</strong> Open <strong>Settings → Deworming reminders</strong>. Reminders work locally without a cloud subscription. The free six-month reminder starts enabled; your phone must also allow notifications.</p>
+      <table>
+        <thead><tr><th>Plan</th><th>Reminder choices</th></tr></thead>
+        <tbody>
+          <tr><td>Free</td><td>Turn the general six-month reminder on or off.</td></tr>
+          <tr><td>Home Breeder</td><td>Turn the general reminder on or off and choose three or six months.</td></tr>
+          <tr><td>Full Breeder</td><td>Use the general three- or six-month schedule, or set an individual pen’s interval from 1 to 120 whole months. Each pen can also be switched off.</td></tr>
+        </tbody>
+      </table>
+      <p>For a pen, open <strong>Flocks → your pen → Deworming reminder</strong>. Leave <strong>Use general schedule</strong> on to follow your general setting, or turn it off to set the pen’s own interval. A custom pen schedule replaces its general reminder, so you do not get both for the same pen.</p>
+      <p>Tap <strong>Treatment completed</strong> to record the actual treatment date. The next due date is that date plus the chosen number of calendar months. If there is no recorded treatment, the interval starts from the date reminders were enabled. A general completion applies to pens using the general schedule; record custom-schedule pen treatments separately.</p>
+      <p>You can correct a mistaken treatment record in its history. Due dates follow the latest remaining treatment. Month-end dates are adjusted to the last day of a shorter month. Due reminders use 9 am local time, and an overdue item remains visible until you record treatment or change its schedule.</p>
+      <p>These are records and reminders for the schedule you choose, not advice about a product, dose or whether treatment is needed.</p>
     </section>
 
     <section id="plans-purchases">
-      <h2>12. Plans and purchases</h2>
-      <p>Pecking Order includes a free Hobby plan, optional permanent purchases and time-limited Breeder access. Prices are shown by Google Play or the App Store for your store account and region before you buy.</p>
+      <h2>14. Plans and purchases</h2>
+      <p>Pecking Order includes a free Hobby plan, optional permanent purchases and a separate cloud subscription. The new tier names and upgrade are being introduced in the latest test version. Prices are shown by Google Play or the App Store for your store account and region before you buy.</p>
 
       <h3>Hobby plan</h3>
       <ul>
@@ -440,9 +497,8 @@
         <li><strong>Custom Fields Pack 2:</strong> adds another two custom bird fields, for six in total.</li>
       </ul>
 
-      <h3>Breeder Unlock</h3>
-      <p>Breeder Unlock is a one-time purchase for users who want expanded breeder features.</p>
-      <p>Breeder Unlock includes:</p>
+      <h3>Home Breeder — NZ$24.99 once</h3>
+      <p>Home Breeder includes the familiar individual-bird breeder features:</p>
       <ul>
         <li>Unlimited chickens and ducks</li>
         <li>Unlimited custom fields</li>
@@ -451,10 +507,18 @@
         <li>Shareable pedigree PDF</li>
         <li>Breeder CSV data export</li>
         <li>Extra bird and egg photos and detailed egg entries</li>
+        <li>A choice of three- or six-month general deworming reminders</li>
       </ul>
 
-      <h3>Monthly Breeder Access</h3>
-      <p>This auto-renewing subscription gives the same Breeder features while active. Manage or cancel renewal through the store that billed you. Cancelling renewal does not immediately remove access already paid for; the store determines its end date.</p>
+      <h3>Full Breeder — NZ$49.99 once</h3>
+      <p>Full Breeder includes Home Breeder and adds pen or breed headcounts, headcount and movement histories, pen egg and breeding records, moving chick batches into pens and custom deworming intervals per pen. You can continue to manage individual birds alongside whole pens.</p>
+      <p><strong>Home-to-Full upgrade: NZ$24.99 once.</strong> This upgrade is for owners of Home Breeder. Full Breeder bought directly does not also require Home Breeder.</p>
+      <div class="note"><strong>Early purchasers keep their benefits.</strong> If you already bought the original full Breeder Unlock, you receive the new Full Breeder features at no extra charge. You do not need to buy Home Breeder, the upgrade or a cloud subscription to use those features on your phone. Restore purchases if your updated app does not recognise your existing unlock.</div>
+
+      <h3>Cloud backup and web access — separate subscription</h3>
+      <p>The cloud plan is NZ$8.99 per month (US$4.99 in the US), with the local price and terms shown in the phone store before purchase. It provides cloud backup, automatic sync, recovery history and access to the web app while active. It does not unlock Home or Full Breeder features by itself. Your one-time breeder purchases remain yours if you cancel the cloud subscription.</p>
+      <p>Manage or cancel renewal through the store that billed you. Cancelling renewal does not immediately remove access already paid for; the store determines its end date. Deleting a cloud account does not cancel a store subscription.</p>
+      <p>Earlier versions offered <strong>Monthly Breeder Access</strong>. That earlier purchase retains its breeder entitlement while active and is separate from the cloud plan; it does not become the new Full Breeder pen unlock.</p>
 
       <h3>Event Breeder Preview</h3>
       <p>An event organiser may provide a single-use store code for a 30-day Breeder preview. Redeem it through Google Play or the App Store using <strong>Redeem event code</strong> on the Plans &amp; Purchases screen. It ends without starting a paid subscription. Availability depends on the specific event's dates and region.</p>
@@ -465,16 +529,25 @@
     </section>
 
     <section id="important-backups">
-      <h2>13. Keeping your records safe</h2>
-      <p>Pecking Order is local-first: your flock database is primarily on this device, not automatically synced to another phone. Create regular backups and save them somewhere outside the app, such as cloud storage, email or another device.</p>
+      <h2>15. Keeping your records safe</h2>
+      <p>Pecking Order is local-first. Without linked cloud access, your records stay on the device unless you export a backup. With supported builds and linked cloud access, recorded changes sync automatically while connected and earlier record versions are kept in cloud history. Create separate backups of important records and save them outside the app as well.</p>
       <div class="warning"><strong>Do not rely only on the phone.</strong> A backup left only on the same phone will not protect you from phone loss, damage or replacement. Restoring a backup replaces the app's current local data, so keep a copy of the current data before restoring an older file.</div>
-      <p>App-managed bird photos can be included in backups. Older photos that still point to a gallery file may need that original file to be available; edit and save the bird record to migrate a reachable older photo before making a new backup.</p>
+      <p>App-managed bird and pen photos can be included in backups. Older photos that still point to a gallery file may need that original file to be available; edit and save the bird record to migrate a reachable older photo before making a new backup.</p>
     </section>
 
     <section id="troubleshooting">
-      <h2>14. Troubleshooting</h2>
+      <h2>16. Troubleshooting</h2>
       <h3>I cannot see a purchase I made</h3>
       <p>Open <strong>Settings → Plans &amp; Purchases</strong> and use <strong>Restore purchases</strong>. Make sure you are using the same Google Play or App Store account that made the purchase.</p>
+
+      <h3>I cannot find pen mode</h3>
+      <p>Check that you have the latest test version, then open <strong>Flocks → Create Flock → Pen / flock headcount</strong>. Pen mode requires Full Breeder, including the original full Breeder Unlock. A cloud subscription alone does not include it. Home Breeder owners can use the Home-to-Full upgrade.</p>
+
+      <h3>I signed in on the web but cannot see my phone records</h3>
+      <p>Use the same email on both devices and a supported phone build. On the phone, open <strong>Account &amp; cloud backup</strong>, check that cloud access is active and link the records on that device. Check <strong>History &amp; sync</strong> for progress, a connection error or a conflict to resolve. Leave the phone app open until its first sync finishes; then return to the web app. Creating an account alone does not upload an existing phone database.</p>
+
+      <h3>I changed something by mistake</h3>
+      <p>For a small correction, edit the record normally. With cloud access, <strong>History &amp; sync → Cloud history</strong> also lets you restore an earlier saved record version. Restoring changes the whole set of records, so check the date and confirmation carefully.</p>
 
       <h3>My backup is not useful if it is only on my phone</h3>
       <p>That is correct. After creating a backup, save it somewhere outside the app and outside the phone where possible.</p>
@@ -493,7 +566,7 @@
     </section>
 
     <section id="support">
-      <h2>15. Support</h2>
+      <h2>17. Support</h2>
       <p>For support, email:</p>
       <p><strong><a href="mailto:support@projectpeckingorder.com">support@projectpeckingorder.com</a></strong></p>
       <p>When asking for help, include:</p>

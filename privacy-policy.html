@@ -44,7 +44,8 @@
     Pecking Order stores the flock information you enter in the app on your
     device. This may include chicken and duck details, notes, dates, egg
     collection records, breeding and family relationships, chick-batch
-    records, pecking-order observations, custom fields and photographs that
+    records, pen headcounts and flock movements, treatment dates and reminder
+    settings, pecking-order observations, custom fields and photographs that
     you choose to add.
   </p>
 
@@ -60,8 +61,10 @@
   <p>
     The app accesses photos or files when you choose to add or change a photo,
     create or restore a backup, export information, or share an export.
-    Local backups and exports are created when you initiate them. Optional egg
-    and backup reminders use device notifications when enabled or permitted.
+    Local backups and exports are created when you initiate them. Egg,
+    deworming and backup reminders use device notifications when enabled and
+    permitted. Deworming reminders are enabled by default in supported builds;
+    you can switch them off in Settings. These reminders work without a cloud account.
   </p>
 
   <p>
@@ -74,7 +77,7 @@
 
   <h2 id="cloud-backup">Optional accounts, cloud backup and web access</h2>
   <p>
-    In supported phone builds, signing in is optional and local recording works without an account. Creating an account does not start a subscription or upload existing flock records. You explicitly link the phone records before saving them to your account. The web app requires sign-in and cloud access. It stores working records in your browser and automatically attempts to save changes every two minutes while open.
+    In supported phone builds, signing in is optional and local recording works without an account. Creating an account does not start a subscription or upload existing flock records. You explicitly link the phone records to your account before cloud transfer begins. With cloud access and linked records, recorded changes and managed photos sync automatically while the app is open and connected. The web app requires sign-in and cloud access and stores a working copy in your browser. The latest test version attempts to sync recorded changes within a few seconds; changes waiting to upload remain on that device and are retried when you reopen the app or browser. This applies to saved records, not unfinished forms. These changes are being introduced through closed testing and may not yet be present in public phone builds.
   </p>
   <p>
     Supabase provides email-code sign-in. It processes your email address,
@@ -87,11 +90,11 @@
     flock backup files, so you can stay signed in between visits.
   </p>
   <p>
-    When you back up or save shared records, a copy of the app's records and managed photos is sent to
-    private Cloudflare storage. Backup metadata includes your account identifier,
-    archive identifier, date, size and a checksum used to check file integrity.
-    Our service checks your signed-in account before allowing access to a
-    backup. Backups are protected in transit and in provider storage; they are
+    When linked records sync or a cloud backup is created, a copy of the app's records and managed photos is sent to
+    private Cloudflare storage. Cloud metadata includes your account identifier,
+    record-version or archive identifier, date, size and checksums used to check file integrity.
+    Our service checks your signed-in account before allowing access to
+    records, photos or backup. Cloud data is protected in transit and in provider storage; it is
     not end-to-end encrypted with a key held only by you. The operator and
     service providers can process this information to run and support the service.
     Cloudflare, Supabase and Resend may process service and security information outside
@@ -101,14 +104,17 @@
     and <a href="https://resend.com/legal/privacy-policy">Resend privacy policy</a>.
   </p>
   <p>
-    The service keeps up to five completed recovery copies, including the currently shared version. Older copies are removed as new ones are saved. Optional daily phone backup runs when you open or return to the app after at least 24 hours. Shared records travel as complete versions, including photos; competing edits require you to choose which version to keep and are not merged automatically. Each cloud archive is limited to 50 MiB. Keep a separate local backup of important records.
+    The latest sync service keeps the most recent 50 saved record versions, including the current version. Restoring an earlier version creates a new version rather than rewriting that earlier entry. Changes to different records or fields can merge automatically; incompatible changes pause syncing until you choose which records to keep. Photos used by any retained record version remain available for recovery. Photos that are no longer referenced by retained versions or pending saves become eligible for cleanup after at least 24 hours; cleanup is not immediate.
+  </p>
+  <p>
+    Separately, the service keeps up to five completed archive backups containing the database and managed photos. Older archives are removed as new ones are saved. Optional daily phone backup runs when you open or return to the app after at least 24 hours; it does not depend on leaving the app running all day. Each cloud archive is limited to 50 MiB. Removing a photo from a current record does not remove its copy from retained history or archive backups. Keep a separate local backup of important records.
   </p>
   <p>
     You can download or delete individual cloud backups in Account &amp; cloud
-    backup. Deleting your cloud account there removes its cloud archives,
-    backup metadata, cloud purchase links and sign-in account; it does not erase records on your
+    backup. Deleting your cloud account there removes its synced records, retained record versions,
+    cloud photos, archives, metadata, cloud purchase links and sign-in account; it does not erase records on your
     device, files you previously downloaded, or store purchases. Signing out
-    stops automatic backups on that device but does not delete cloud copies.
+    stops automatic sync and backups on that device but does not delete cloud copies.
     Expiry of cloud subscription access does not by itself delete existing backups
     or prevent their download or deletion. Deleting a cloud account does not cancel a store subscription; cancel it through the store as well. Clearing browser data removes that browser’s local working copy. Service providers may retain
     limited security logs or recovery copies according to their retention
@@ -118,8 +124,11 @@
 
   <h2>Purchases and verification</h2>
   <p>
-    Pecking Order offers optional one-time purchases, a monthly Breeder
-    subscription and code-based, time-limited Breeder previews. Google Play
+    Pecking Order offers optional one-time purchases, including Home Breeder,
+    Full Breeder and a Home-to-Full upgrade in supported builds, a separate
+    cloud backup and web subscription, and code-based, time-limited Breeder
+    previews. Earlier app versions also offered Monthly Breeder Access.
+    Google Play
     or the Apple App Store processes payments and redemptions. Project Pecking
     Order does not receive or store your payment-card details.
   </p>
