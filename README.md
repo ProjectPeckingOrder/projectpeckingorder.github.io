@@ -6,10 +6,25 @@ Static Assets. The previous GitHub Pages address remains available; its store
 links have not been changed in this migration. Site owner: Kevin Trigg.
 
 Run `node build.mjs` to prepare the explicit public asset list in `dist/`, then
-deploy using the pinned Wrangler 4.149.0 from the sibling app repository's
+deploy using the pinned Wrangler 4.157.0 from the sibling app repository's
 `backend/cloudflare/cloud-backup` package and this site's `wrangler.jsonc`.
 The build rewrites canonical and sitemap URLs for the Cloudflare deployment.
 Do not upload the repository root: it contains source and deployment files.
+
+The November refresh adds `features.html`, the guided hatch/Projects manual,
+sample-data mobile and desktop screen previews, social metadata and structured
+application data. Run `node check.mjs` after building to check public-page links,
+anchors, images, metadata and sitemap. `node preview.mjs` serves only `dist/` at
+`http://127.0.0.1:4287` for local inspection. Screens are exported by the app's
+`tool/website_screenshots_test.dart`; never replace them with private flock data.
+The small header icon is the app's existing 192px Android launcher asset.
+
+Plus includes all breeder tools while subscribed, cloud/web access and
+subscription-only Breeding Projects. Home/Full one-time purchases remain after
+expiry. The anonymous-usage prompt is explicit opt-in, shown after onboarding;
+its separate collector keeps short-lived daily receipts and aggregate totals.
+Keep the privacy policy and store privacy declarations aligned before the
+mobile build introducing monitoring is distributed.
 
 The homepage and manual distinguish shipped features from the latest Google
 Play closed-testing update. Pen headcounts, the new Home/Full Breeder tiers,

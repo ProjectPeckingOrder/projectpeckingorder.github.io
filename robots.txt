@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://projectpeckingorder.github.io/sitemap.xml
+Sitemap: https://projectpeckingorder.com/sitemap.xml
