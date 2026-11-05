@@ -12,4 +12,6 @@ http.createServer(async (req,res) => {
     const body = await readFile(file);
     res.writeHead(200, {'Content-Type':mime[path.extname(file)] ?? 'application/octet-stream', 'Cache-Control':'no-store'}).end(body);
   } catch { res.writeHead(404).end(); }
-}).listen(4287,'127.0.0.1',()=>console.log('Website preview: http://127.0.0.1:4287'));
+}).listen(Number(process.env.PECKING_PREVIEW_PORT ?? 4287),'127.0.0.1',function () {
+  console.log(`Website preview: http://127.0.0.1:${this.address().port}`);
+});
