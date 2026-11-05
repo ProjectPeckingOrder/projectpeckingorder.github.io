@@ -1,6 +1,6 @@
 import {readFile, stat} from 'node:fs/promises';
 import assert from 'node:assert/strict';
-const pages = ['index.html', 'features.html', 'user-manual.html', 'privacy-policy.html', 'terms-of-use.html'];
+const pages = ['index.html', 'features.html', 'start-here.html', 'club-kit.html', 'user-manual.html', 'privacy-policy.html', 'terms-of-use.html'];
 const html = Object.fromEntries(await Promise.all(pages.map(async p => [p, await readFile(`dist/${p}`, 'utf8')])));
 for (const [name, source] of Object.entries(html)) {
   assert.match(source, /<title>[^<]+<\/title>/);
