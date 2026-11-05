@@ -1,0 +1,17 @@
+{
+  "name": "project-pecking-order-site",
+  "account_id": "7fc2523ea261d59eb0ecd9714fce2f2f",
+  "compatibility_date": "2026-10-13",
+  "assets": {"directory": "./dist"},
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {"pattern": "projectpeckingorder.com", "custom_domain": true},
+    {"pattern": "www.projectpeckingorder.com", "custom_domain": true}
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": {"enabled": true, "head_sampling_rate": 1},
+    "traces": {"enabled": true, "head_sampling_rate": 0.01}
+  }
+}

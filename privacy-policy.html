@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pecking Order Privacy Policy</title>
   <meta name="description" content="How the Pecking Order poultry app handles flock records, photos, backups and store purchase verification.">
-  <link rel="canonical" href="https://projectpeckingorder.github.io/privacy-policy.html">
+  <link rel="canonical" href="https://projectpeckingorder.com/privacy-policy.html">
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -29,10 +29,10 @@
 
 <body class="policy-page">
   <a class="skip-link" href="#policy">Skip to content</a>
-  <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><img src="assets/pecking-order-icon.png" alt="" width="42" height="42"><span>Pecking Order</span></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="user-manual.html">User manual</a><a href="mailto:peckingsupport@gmail.com">Support</a></nav></div></header>
+  <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><img src="assets/app-icon-small.png" alt="" width="42" height="42"><span>Pecking Order</span></a><nav aria-label="Main navigation"><a class="nav-contact" href="https://app.projectpeckingorder.com">Web sign in</a><a href="index.html">Home</a><a href="user-manual.html">User manual</a><a href="mailto:support@projectpeckingorder.com">Support</a></nav></div></header>
   <main id="policy" class="legal-shell">
   <h1>Pecking Order Privacy Policy</h1>
-  <p class="updated">Last updated: 26 September 2026</p>
+  <p class="updated">Last updated: 5 November 2026</p>
 
   <p>
     Pecking Order is a flock and poultry-breeding record-management app.
@@ -44,37 +44,92 @@
     Pecking Order stores the flock information you enter in the app on your
     device. This may include chicken and duck details, notes, dates, egg
     collection records, breeding and family relationships, chick-batch
-    records, pecking-order observations, custom fields and photographs that
+    records, pen headcounts and flock movements, treatment dates and reminder
+    settings, pecking-order observations, custom fields, Flock Runner scores and photographs that
     you choose to add.
   </p>
 
   <h2>How information is used</h2>
   <p>
-    Your information is used only to provide the app's flock-management,
+    Your flock information is used to provide the app's flock-management,
     breeding, egg tracking, family-tree, pecking-order, backup, and export features.
-    Pecking Order does not operate a user-account system, cloud database,
-    advertising service, or analytics service for your flock records.
+    The phone app can store flock records locally without an account. Optional accounts, cloud backup and the web app are described below. Availability depends on the app version and an active cloud subscription. We do not sell your flock records or
+    use them for advertising.
   </p>
 
   <h2>Photos, backups, exports, and sharing</h2>
   <p>
     The app accesses photos or files when you choose to add or change a photo,
     create or restore a backup, export information, or share an export.
-    Backups and exports are created only when you initiate them. Optional egg
-    and backup reminders use device notifications when enabled or permitted.
+    Local backups and exports are created when you initiate them. Egg,
+    deworming and backup reminders use device notifications when enabled and
+    permitted. Deworming reminders are enabled by default in supported builds;
+    you can switch them off in Settings. These reminders work without a cloud account.
   </p>
 
   <p>
     If you choose to share or save a backup or export using another app,
     cloud-storage provider, email service, or device location, that service
     handles the information under its own privacy policy. Pecking Order does
-    not automatically send your flock records to Project Pecking Order.
+    not send your flock records to Project Pecking Order unless you choose to
+    use the optional cloud service.
+  </p>
+
+  <h2 id="cloud-backup">Optional accounts, cloud backup and web access</h2>
+  <p>
+    In supported phone builds, signing in is optional and local recording works without an account. Creating an account does not start a subscription or upload existing flock records. You explicitly link the phone records to your account before cloud transfer begins. With cloud access and linked records, recorded changes and managed photos sync automatically while the app is open and connected. The web app requires sign-in and cloud access and stores a working copy in your browser. The latest test version attempts to sync recorded changes within a few seconds; changes waiting to upload remain on that device and are retried when you reopen the app or browser. This applies to saved records, not unfinished forms. These changes are being introduced through closed testing and may not yet be present in public phone builds.
+  </p>
+  <p>
+    Supabase provides email-code sign-in. It processes your email address,
+    account identifier, verification and session information, and security
+    information such as sign-in times and network addresses. Resend delivers
+    login emails and processes the recipient address, email content and delivery
+    information; your email provider also handles the message. We do not enable
+    email-open or link-click tracking for sign-in emails. The app stores its
+    sign-in session in the device's secure storage, outside
+    flock backup files, so you can stay signed in between visits.
+  </p>
+  <p>
+    When linked records sync or a cloud backup is created, a copy of the app's records and managed photos is sent to
+    private Cloudflare storage. Cloud metadata includes your account identifier,
+    record-version or archive identifier, date, size and checksums used to check file integrity.
+    Our service checks your signed-in account before allowing access to
+    records, photos or backup. Cloud data is protected in transit and in provider storage; it is
+    not end-to-end encrypted with a key held only by you. The operator and
+    service providers can process this information to run and support the service.
+    Cloudflare, Supabase and Resend may process service and security information outside
+    New Zealand under their respective
+    <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>,
+    <a href="https://supabase.com/privacy">Supabase privacy policy</a>
+    and <a href="https://resend.com/legal/privacy-policy">Resend privacy policy</a>.
+  </p>
+  <p>
+    The latest sync service keeps the most recent 50 saved record versions, including the current version. Restoring an earlier version creates a new version rather than rewriting that earlier entry. Changes to different records or fields can merge automatically; incompatible changes pause syncing until you choose which records to keep. Photos used by any retained record version remain available for recovery. Photos that are no longer referenced by retained versions or pending saves become eligible for cleanup after at least 24 hours; cleanup is not immediate.
+  </p>
+  <p>
+    Separately, the service keeps up to five completed archive backups containing the database and managed photos. Older archives are removed as new ones are saved. Optional daily phone backup runs when you open or return to the app after at least 24 hours; it does not depend on leaving the app running all day. Each cloud archive is limited to 50 MiB. Removing a photo from a current record does not remove its copy from retained history or archive backups. Keep a separate local backup of important records.
+  </p>
+  <p>
+    You can download or delete individual cloud backups in Account &amp; cloud
+    backup. Deleting your cloud account there removes its synced records, retained record versions,
+    cloud photos, archives, metadata, cloud purchase links and sign-in account; it does not erase records on your
+    device, files you previously downloaded, or store purchases. Signing out
+    stops automatic sync and backups on that device but does not delete cloud copies.
+    Expiry of cloud subscription access does not by itself delete existing backups
+    or prevent their download or deletion. Deleting a cloud account does not cancel a store subscription; cancel it through the store as well. Clearing browser data removes that browser’s local working copy. Service providers may retain
+    limited security logs or recovery copies according to their retention
+    policies. Contact support if you cannot access your account or need help
+    with access, correction or deletion.
   </p>
 
   <h2>Purchases and verification</h2>
+  <p>See <a href="terms-of-use.html">Terms of Use and Subscription Information</a> for links to the applicable store terms and information about monthly renewal and cancellation.</p>
   <p>
-    Pecking Order offers optional one-time purchases, a monthly Breeder
-    subscription and code-based, time-limited Breeder previews. Google Play
+    Pecking Order offers optional one-time purchases, including Home Breeder,
+    Full Breeder and a Home-to-Full upgrade in supported builds, a separate
+    cloud backup and web subscription, and code-based, time-limited Breeder
+    previews. Earlier app versions also offered Monthly Breeder Access.
+    Google Play
     or the Apple App Store processes payments and redemptions. Project Pecking
     Order does not receive or store your payment-card details.
   </p>
@@ -91,6 +146,7 @@
     information is also handled under Google's or Apple's own privacy terms.
   </p>
 
+  <p>To connect store purchases to your cloud account, we retain the product and platform, purchase token or transaction identifier, verification status and expiry in private cloud metadata. This allows the service to recheck renewals, refunds and cancellations. New purchases can include a pseudonymous account identifier for secure linking. A Breeder unlock alone does not grant ongoing cloud access.</p>
   <h2>Data retention and deletion</h2>
   <p>
     Flock information remains on your device until you delete it in the app or
@@ -102,7 +158,16 @@
     below; store purchase histories are managed by Google or Apple.
   </p>
 
-  <h2>Children</h2>
+  <h2 id="anonymous-usage">Optional anonymous usage reports</h2>
+<p>The updated app asks whether you would like to share anonymous usage. No usage reports are sent before you agree. “Not now” declines the request; you can enable or disable it later in Settings. The choice applies to this installation or browser and is not included in flock backups or synced to your account.</p>
+<p>If enabled, the app reports fixed categories: features opened that day (such as egg statistics, hatches, family trees or Flock Runner), successful local backup creation, platform (Android, iOS or web), ranges for active individual chicken and duck records, and recognised breeds present in those records. Pen-only headcounts are not included. Breed categories outside the built-in list are sent as “Other”, and missing breeds as “Unknown”. We do not send names, bird codes, database record identifiers, notes, photos, custom breed text, email addresses, account identifiers, precise location or advertising identifiers.</p>
+<p>A random receipt changes every UTC day and prevents duplicate counts that day. It is not a permanent device or installation identifier. We keep these receipts with fixed metric categories for no longer than three days, then retain only daily aggregate totals for up to 13 months. Features and flock categories are counted independently, without a permanent user profile. The reports are stored separately from accounts and cloud backups, with no public reporting endpoint. We do not sell them or use them for advertising.</p>
+<p>Cloudflare receives the network connection and transiently uses its network address to rate-limit requests. Our usage database does not store IP addresses, request headers or account credentials. Infrastructure providers may process connection information for security. The app sends to our first-party service without account authentication or cookies. Routine request logging and trace sampling are disabled for this service; error logs contain generic service errors, not report content.</p>
+<p>Turning sharing off stops queued reports and removes the device's pending usage summary. A request already sent cannot be recalled. We cannot identify and remove your contribution from anonymous aggregate totals. Reports are limited to the current day; an old offline usage history is not uploaded later. Clearing app/browser storage resets this preference. If you are a child, ask a parent before opting in.</p>
+<h2>App rating requests</h2><p>The mobile app can count consecutive calendar days of use locally to decide when to request a native Apple or Google review after 15 days. This count stays on the device, is not synced, and is independent of usage-report consent. The store controls whether a prompt appears and handles any rating you choose to submit under its own terms.</p>
+<h2>Support diagnostics and recovery copies</h2>
+<p>The next app update can prepare a diagnostic report containing app version, platform and cloud/sync/notification status flags. It excludes account details, bird content, purchase proofs, file paths and raw errors. The report is shown to you first and is sent only if you choose a share destination or attach it to a support message. Information you choose to put in a support email is used to respond to that request.</p><p>Verified purchase proofs may also be held in the phone's secure storage to recheck refunds or expiry even when a store query omits the purchase. These proofs are excluded from flock backups and diagnostic exports. Eligible event previews can be linked to cloud/web access until their original verified expiry; this does not start a paid subscription.</p><p>Before replacing records through backup restore, updated builds save a recovery copy in app-managed storage. You can export or delete it in Storage &amp; recovery. On the web, the copy is stored in that account's local browser storage; clearing browser data removes local copies. Keep an exported copy separately for recovery.</p>
+<h2>Children</h2>
   <p>
     Pecking Order is intended for adult poultry keepers and breeders. It is not
     designed for children, and Project Pecking Order does not knowingly collect
@@ -117,10 +182,10 @@
 
   <h2>Contact</h2>
   <p>
-    For privacy questions, contact:
-    <a href="mailto:peckingsupport@gmail.com">peckingsupport@gmail.com</a>
+    Pecking Order is operated by Kevin Trigg. For privacy questions, contact:
+    <a href="mailto:support@projectpeckingorder.com">support@projectpeckingorder.com</a>
   </p>
   </main>
-  <footer class="site-footer"><div class="shell footer-inner"><div><strong>Pecking Order</strong><p>Thoughtful tools for poultry keepers.</p></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="user-manual.html">User manual</a><a href="mailto:peckingsupport@gmail.com">Contact support</a></nav><small>© 2026 Project Pecking Order</small></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner"><div><strong>Pecking Order</strong><p>Thoughtful tools for poultry keepers.</p></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="user-manual.html">User manual</a><a href="mailto:support@projectpeckingorder.com">Contact support</a></nav><small>© 2026 Kevin Trigg · Project Pecking Order</small></div></footer>
 </body>
 </html>

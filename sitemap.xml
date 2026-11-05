@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://projectpeckingorder.github.io/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://projectpeckingorder.com/</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://projectpeckingorder.github.io/user-manual.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://projectpeckingorder.com/user-manual.html</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://projectpeckingorder.github.io/privacy-policy.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://projectpeckingorder.com/privacy-policy.html</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
+  <url>
+    <loc>https://projectpeckingorder.com/terms-of-use.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url><loc>https://projectpeckingorder.com/features.html</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://projectpeckingorder.com/start-here.html</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://projectpeckingorder.com/club-kit.html</loc><lastmod>2026-11-05</lastmod></url>
 </urlset>
